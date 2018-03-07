@@ -17,13 +17,16 @@ body {
 button {
 }
 
+input {
+	text-align: right
+}
 
 h1 {
 	text-align:center;
 }
 
 #wrapper {
-	width: 960px;
+	width: 620px;
 	margin: 20px auto;
 }
 
@@ -37,6 +40,7 @@ h1 {
 }
 #rightColumn {
 	float: right;
+
 	width: px;
 	background-color: rgba(108,110,231,1.00);
 	text-align:center;
@@ -46,3 +50,16 @@ h1 {
 input {
 	text-align:right;
 }
+
+	background-color: blue;
+	width: 300px;
+	text-align: center;
+}
+
+#rightColumn input {
+	width: 100px;
+}
+
+
+ 
+
