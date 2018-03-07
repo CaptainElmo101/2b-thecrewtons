@@ -26,6 +26,8 @@ window.onload = function() {
 	document.getElementById("moretrees").addEventListener("click", buy_trees);
 	document.getElementById("moreland").addEventListener("click", buy_land);
 	document.getElementById("moreslaves").addEventListener("click", buy_slaves);
+	document.getElementById("morefish").addEventListener("click", buy_fish);
+};
 };
 
 // runs every second
@@ -72,6 +74,20 @@ function buy_slaves() {
 	}
 	update_values();
 }
+/* did all the hard work you just need to find one bug and it will work thus I did not know what price you wanted the fish so i just put 10*/
+/* could not find bug good luck*/
+function buy_fish() {
+	if( money >= fish_price) {
+		money -= fish_price;
+		fish++;
+	}
+	else if( money < fish_price ) {
+		alert ("You do not have enough CashMoney");
+	}
+	update_values();
+}
+
+
 
 function update_values() {
 	document.getElementById("score").value = "$" + money.toFixed(2);
@@ -81,5 +97,6 @@ function update_values() {
 	document.getElementById("moretrees").innerHTML = "Buy More Trees $" + tree_price;
 	document.getElementById("moreland").innerHTML = "Buy More Land $" + land_price;
 	document.getElementById("moreslaves").innerHTML = "Buy More Slaves $" + slave_price;
+	document.getElementById("morefish").innerHTML = "Buy More fish $" + fish_price;
 
 }
